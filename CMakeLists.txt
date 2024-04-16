@@ -10,6 +10,6 @@ target_sources(${APP} PRIVATE app.c)
 
 FOREACH(LIB ${LIBRARIES})
    target_include_directories(${APP} PRIVATE ${PROJECT_SOURCE_DIR}/${LIB})
-   target_link_libraries(${APP} ${LIB})
    add_subdirectory(${LIB})
+   target_link_libraries(${APP} ${LIB})
 ENDFOREACH()

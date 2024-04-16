@@ -1,5 +1,5 @@
-#include "shape/shape.h"
-#include "square/square.h"
+#include "shape.h"
+#include "square.h"
 int main() {
    printshape();
    printsquare();

@@ -1,0 +1,37 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 29,
+    "patch": 0
+  },
+  "include": [],
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default Makefile Config",
+      "description": "Default build using Makefile generator",
+      "generator": "Makefile",
+      "binaryDir": "${sourceDir}/build",
+      "toolchainFile": "toolchain/clang.cmake",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": {
+          "type": "BOOL",
+          "value": "ON"
+        },
+        "DUMP_OBJ": {
+          "type": "BOOL",
+          "value": "ON"
+        }
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "targets": ["lpc"],
+      "nativeToolOptions": ["--no-print-directory"]
+    }
+  ]
+}

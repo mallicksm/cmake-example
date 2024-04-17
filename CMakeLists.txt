@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
 project(lpc LANGUAGES C)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(APP lpc)
 
@@ -13,3 +12,4 @@ FOREACH(LIB ${LIBS})
    add_subdirectory(drivers/${LIB})
    target_link_libraries(${APP} ${LIB})
 ENDFOREACH()
+message("${CMAKE_EXE_LINKER_FLAGS}")

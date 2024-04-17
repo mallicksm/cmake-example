@@ -1,5 +1,11 @@
+LD_LIBRARY_PATH+=:/opt/si/emu/users/soummya/tools/gcc/gcc-10.1.0/lib
+LD_LIBRARY_PATH+=:/opt/si/emu/users/soummya/tools/gcc/gcc-10.1.0/lib64
 all: clean
-	cmake -B build -G "Unix Makefiles" .
+	cmake \
+		-B build \
+		-G "Unix Makefiles" \
+		-D CMAKE_EXPORT_COMPILE_COMMANDS=ON \
+		-D CMAKE_TOOLCHAIN_FILE=toolchain/clang.cmake
 	cmake --build build --target lpc
 
 clean:

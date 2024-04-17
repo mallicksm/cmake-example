@@ -1,5 +1,3 @@
-LD_LIBRARY_PATH+=:/opt/si/emu/users/soummya/tools/gcc/gcc-10.1.0/lib
-LD_LIBRARY_PATH+=:/opt/si/emu/users/soummya/tools/gcc/gcc-10.1.0/lib64
 all: clean
 	@cmake \
       -G "Unix Makefiles" \

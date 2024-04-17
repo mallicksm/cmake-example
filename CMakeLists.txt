@@ -13,3 +13,7 @@ FOREACH(LIB ${LIBS})
    target_link_libraries(${APP} ${LIB})
 ENDFOREACH()
 message("${CMAKE_EXE_LINKER_FLAGS}")
+
+add_custom_command(TARGET ${APP} POST_BUILD
+   COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${APP}>
+   COMMAND ${CMAKE_OBJDUMP} --disassemble $<TARGET_FILE:${APP}> > ${APP}.S)

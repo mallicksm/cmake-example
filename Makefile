@@ -7,7 +7,7 @@ all: clean
 		-D CMAKE_EXPORT_COMPILE_COMMANDS=ON \
 		-D DUMP_OBJ=ON \
 		-D CMAKE_TOOLCHAIN_FILE=toolchain/clang.cmake
-	cmake --build build --target lpc
+	cmake --build build --target lpc -- --no-print-directory
 
 clean:
 	rm -rf build .cache

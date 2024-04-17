@@ -5,6 +5,7 @@ all: clean
 		-B build \
 		-G "Unix Makefiles" \
 		-D CMAKE_EXPORT_COMPILE_COMMANDS=ON \
+		-D DUMP_OBJ=ON \
 		-D CMAKE_TOOLCHAIN_FILE=toolchain/clang.cmake
 	cmake --build build --target lpc
 

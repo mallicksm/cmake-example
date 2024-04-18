@@ -1,4 +1,5 @@
 #!/bin/bash
-rm -rf build .cache
-cmake --preset=default -G "Unix Makefiles"
-cmake --build --preset=default
+BUILD_DIR=build
+rm -rf $BUILD_DIR
+cmake -B $BUILD_DIR --preset=default
+cmake --build $BUILD_DIR --preset=default

@@ -11,7 +11,6 @@ FOREACH(LIB ${LIBS})
    add_subdirectory(drivers/${LIB})
    target_include_directories(${APP} PRIVATE drivers/${LIB})
 ENDFOREACH()
-message("${CMAKE_EXE_LINKER_FLAGS}")
 
 
 add_custom_command(TARGET ${APP} POST_BUILD

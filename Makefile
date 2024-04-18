@@ -9,5 +9,5 @@ all:
 		entry.o start.o -o lpc.elf
 	llvm-objdump -drSt lpc.elf > lpc.S
 clean:
-	rm -rf entry.o start.o lpc.elf lpc.S lpc.map
+	rm -rf entry.o start.o lpc.elf lpc.S lpc.map .cache
 # vim: ts=3 sts=3 sw=3 et

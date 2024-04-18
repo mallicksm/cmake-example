@@ -7,5 +7,8 @@
 // Description:
 //    jump to main
 //------------------------------------------------------------------------------
+__attribute__((aligned(16))) char stack0[PGSIZE * STACKSZ + PGSIZE];
 void start() {
+   while (1)
+      ;
 }

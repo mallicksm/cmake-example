@@ -3,7 +3,7 @@ ENTRY( _entry )
 SECTIONS
 {
    ER_TEXT 0x06000000 : {
-      *entry.*(.text)
+      *entry.*(StartUp)
       *(.text.startup)
       *(.text)
       *(.rodata)

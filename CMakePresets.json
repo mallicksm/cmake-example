@@ -26,11 +26,13 @@
     },
     {
       "name": "x86",
-      "inherits": "default"
+      "inherits": "default",
+      "toolchainFile": "toolchain/clang.x86.cmake"
     },
     {
       "name": "arm64",
-      "inherits": "default"
+      "inherits": "default",
+      "toolchainFile": "toolchain/clang.arm64.cmake"
     }
   ],
   "buildPresets": [

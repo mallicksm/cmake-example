@@ -8,9 +8,8 @@ add_subdirectory(kernel)
 
 set(LIBS shape square)
 FOREACH(LIB ${LIBS})
-   target_include_directories(${APP} PRIVATE drivers/${LIB})
    add_subdirectory(drivers/${LIB})
-   target_link_libraries(${APP} ${LIB})
+   target_include_directories(${APP} PRIVATE drivers/${LIB})
 ENDFOREACH()
 message("${CMAKE_EXE_LINKER_FLAGS}")
 

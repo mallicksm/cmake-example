@@ -1,0 +1,27 @@
+#! armclang --target=arm-arm-non-eabi -march=armv8-a -E -x c
+;===============================================================================
+; ARM Scatter file
+; Created: Mar-31-2023
+; Author: soummya
+;
+; Description: combined arm scatter file for el3 init and el1 cprog
+;
+; Syntax:
+;    region_name (base_address | ("+" offset)) [attribute_list] [max_size]
+;       {
+;          region_description+
+;       }
+;===============================================================================
+#include "../kernel/memlayout.h"
+LR_REGION TEXT_BASE
+{
+   ER_TEXT TEXT_BASE TEXT_SIZE
+   {
+      entry.o (StartUp, +FIRST)
+      * (+RO,+RW)
+   }
+   ER_DATA +0 ALIGN 0x1000 DATA_SIZE
+   {
+      * (+ZI)
+   }
+}

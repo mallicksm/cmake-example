@@ -11,9 +11,9 @@
       "name": "default",
       "displayName": "Default Makefile Config",
       "description": "Default build using Makefile generator",
-      "generator": "Makefile",
+      "generator": "Unix Makefile",
       "binaryDir": "${sourceDir}/build",
-      "toolchainFile": "toolchain/clang.cmake",
+      "toolchainFile": "toolchain/clang.x86.cmake",
       "cacheVariables": {
         "CMAKE_EXPORT_COMPILE_COMMANDS": {
           "type": "BOOL",

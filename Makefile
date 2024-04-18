@@ -10,4 +10,6 @@ all:
 		-T kernel64/SRAM.ld \
 		entry.o start.o -o lpc.elf
 	llvm-objdump --disassemble lpc.elf > lpc.S
+clean:
+	rm -rf entry.o start.o lpc.elf lpc.S
 # vim: ts=3 sts=3 sw=3 et
